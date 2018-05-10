@@ -1,12 +1,13 @@
-compiler: ghc-8.2.1
-resolver: nightly-2017-11-01
+compiler: ghc-8.2.2
+resolver: lts-11.1
 
 local-bin-path: bin
 
 flags: {}
 
 extra-deps:
-  - text-regex-replace-0.1.1.1
+- ede-0.2.8.7 # TODO: replace this with a newer version that fixes: https://github.com/brendanhay/ede/issues/28
+- text-regex-replace-0.1.1.1
 
 packages:
   - gen
@@ -45,7 +46,6 @@ packages:
   - amazonka-config
   - amazonka-cur
   - amazonka-datapipeline
-  - amazonka-dax
   - amazonka-devicefarm
   - amazonka-directconnect
   - amazonka-discovery
